@@ -87,7 +87,7 @@ func getScore(gameStamps []ScoreStamp, offset int) Score {
 
 	if offset <= 0 {
 		return Score{0, 0}
-	} else if offset > gameStamps[len(gameStamps)-1].Offset {
+	} else if offset >= gameStamps[len(gameStamps)-1].Offset {
 		return gameStamps[len(gameStamps)-1].Score
 	}
 
